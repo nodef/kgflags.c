@@ -1,8 +1,8 @@
 ## About
-kgflags is an easy to use command-line flag parsing library.
+kgflags is an easy to use command-line flag parsing library, by [Krzysztof Gabis](https://github.com/kgabis).
 
 ## Features
-* Header-only (just copy kgflags.h).
+* Header-only (just copy `kgflags.h`).
 * Easy to use.
 * MIT licensed.
 * No dynamic allocations.
@@ -41,22 +41,26 @@ More examples can be found in [examples directory](http://github.com/kgabis/kgfl
 
 ## Installation
 Run:
+```bash
+$ npm i kgflags.c
 ```
-git clone https://github.com/kgabis/kgflags.git
-```
-and copy kgflags.h to you source code tree.
 
-It behaves like most single header libraries - you have to declare KGFLAGS_IMPLEMENTATION in *one* C or C++ file *before* including it.
+And then include `kgflags.h` as follows:
+```c
+#include "node_modules/kgflags.c/kgflags.h"
+```
+
+It behaves like most single header libraries - you have to declare `KGFLAGS_IMPLEMENTATION` in *one* C or C++ file *before* including it.
 
 ```c
 #define KGFLAGS_IMPLEMENTATION
-#include "kgflags.h"
+#include "node_modules/kgflags.c/kgflags.h"
 ```
 
-You can also customize max number of supported arguments/flags/errors by redefining KGFLAGS_MAX_NON_FLAG_ARGS, KGFLAGS_MAX_FLAGS and KGFLAGS_MAX_ERRORS (*before* including kgflags.h).
+You can also customize max number of supported arguments/flags/errors by redefining `KGFLAGS_MAX_NON_FLAG_ARGS`, `KGFLAGS_MAX_FLAGS` and `KGFLAGS_MAX_ERRORS` (*before* including `kgflags.h`).
 
 ## Testing
-Run ```pushd tests; ./run_tests.sh; popd``` to compile and run tests.
+Run ```pushd node_modules/kgflags.c/tests; ./run_tests.sh; popd``` to compile and run tests.
 
 ## Limitations
 * It relies on global variables which means it's not thread safe. This shouldn't be an issue since argument parsing is done only once during startup of the application.

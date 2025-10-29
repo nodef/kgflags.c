@@ -1,0 +1,18 @@
+{
+  "name": "kgflags.c",
+  "version": "0.6.1",
+  "description": "kgflags is an easy to use command-line flag parsing library; Krzysztof Gabis (2020).",
+  "keywords": ["c", "library", "command", "line", "flags", "parsing", "parser"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/kgflags.c.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nodef/kgflags.c/issues"
+  },
+  "homepage": "https://github.com/nodef/kgflags.c#readme",
+  "files": [
+    "kgflags.h"
+  ]
+}
